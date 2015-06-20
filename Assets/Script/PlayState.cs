@@ -28,6 +28,7 @@ public class PlayState : Singleton<PlayState> {
 		public string charaName;
 		public string skillName;
 		public int skilllevel;
+		public Sprite img;
 	}
 	//シーン更新の際引き継ぐデータ
 	[System.NonSerialized]
@@ -56,6 +57,9 @@ public class PlayState : Singleton<PlayState> {
 	public int character_change_to;
 	public int for_temp;
 
+	//ガチャシーン→ガチャリザルトシーンで使用
+	public int gacha_left_count;
+
 	//プロパティ
 	public override void onAwake()
 	{
@@ -71,10 +75,17 @@ public class PlayState : Singleton<PlayState> {
 			selectCharaNumber [i] = i;
 		}
 		selectCharaNumber [4] = -1;
-		backCharaNumber [0] = 5;
+		backCharaNumber.Add (5);
+		backCharaNumber.Add (6);
+		backCharaNumber.Add (7);
+		backCharaNumber.Add (8);
+
+		
+		/*backCharaNumber [0] = 5;
 		backCharaNumber [1] = 6;
 		backCharaNumber [2] = 7;
 		backCharaNumber [3] = 8;
+*/
 
 		for (int i=0; i<character.Length; i++) {
 			//カグヤデータ

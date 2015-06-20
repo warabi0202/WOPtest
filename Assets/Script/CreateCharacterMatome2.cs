@@ -14,7 +14,7 @@ public class CreateCharacterMatome2 : MonoBehaviour {
 		
 		for(int i=0;i<PlayState.Instance.backCharaNumber.Count;i++){
 			
-			/*if(PlayState.Instance.backCharaNumber[i]!= -1){*/
+			if(PlayState.Instance.backCharaNumber[i]!= -1){
 				var item = GameObject.Instantiate(Contentprefab) as RectTransform;
 				item.SetParent(transform,false);
 				item.GetComponent<CharacterMatome>().number = i;
@@ -40,7 +40,7 @@ public class CreateCharacterMatome2 : MonoBehaviour {
 				charaCost.GetComponentInChildren<Text>().text = "Lv　" + PlayState.Instance.character[PlayState.Instance.backCharaNumber[i]].cost.ToString();
 				
 				
-			//}
+			}
 		}
 		
 	}

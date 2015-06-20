@@ -13,7 +13,7 @@ public class CharacterChangeButton : MonoBehaviour {
 	
 	}
 
-	public void ToDeckScene2AndCharacterChange(string matomeName){
+	public void ToDeckScene2AndCharacterChange(){
 		PlayState.Instance.character_change_from = gameObject.transform.parent.GetComponent<CharacterMatome> ().number;
 		Application.LoadLevel ("deckScene2");
 	}

@@ -25,6 +25,14 @@ public class ButtonController : MonoBehaviour {
 	public void ToDeckScene(){
 		Application.LoadLevel ("deckScene");
 	}
+	public void ToGachaResultScene_single(){
+		PlayState.Instance.gacha_left_count = 1;
+		Application.LoadLevel ("gachaResultScene");
+	}
+	public void ToGachaResultScene_multiple(){
+		PlayState.Instance.gacha_left_count = 10;
+		Application.LoadLevel ("gachaResultScene");
+	}
 
 
 
