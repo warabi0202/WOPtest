@@ -52,6 +52,8 @@
      <Compile Include="Assets\Script\CharacterMatome.cs" />
      <Compile Include="Assets\Script\CreateCharacterMatome.cs" />
      <Compile Include="Assets\Script\CreateCharacterMatome2.cs" />
+     <Compile Include="Assets\Script\CreateCharacterMatomeForPowerUpCardSerect.cs" />
+     <Compile Include="Assets\Script\CreateCharacterMatomeForPowerUpCardSerect2.cs" />
      <Compile Include="Assets\Script\CreateGachaResult.cs" />
      <Compile Include="Assets\Script\DeleteFlag.cs" />
      <Compile Include="Assets\Script\PlayState.cs" />
@@ -60,6 +62,8 @@
      <Compile Include="Assets\Script\UIbutton\AddMember.cs" />
      <Compile Include="Assets\Script\UIbutton\CharacterChangeButton.cs" />
      <Compile Include="Assets\Script\UIbutton\CharacterChangeButton2.cs" />
+     <Compile Include="Assets\Script\UIbutton\CharacterPowerUpButton.cs" />
+     <Compile Include="Assets\Script\UIbutton\CharacterPowerUpButton2.cs" />
      <Compile Include="Assets\Script\UIbutton\CharacterRemoveButton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

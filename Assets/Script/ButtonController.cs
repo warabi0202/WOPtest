@@ -34,6 +34,11 @@ public class ButtonController : MonoBehaviour {
 		Application.LoadLevel ("gachaResultScene");
 	}
 
+	public void ToCardPowerUpScene(){
+		Application.LoadLevel ("CardPowerUpScene");
+	}
+
+
 
 
 

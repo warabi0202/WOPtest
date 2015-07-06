@@ -56,9 +56,11 @@ public class PlayState : Singleton<PlayState> {
 	public int character_change_from;
 	public int character_change_to;
 	public int for_temp;
+	public int powerUpBase;
 
 	//ガチャシーン→ガチャリザルトシーンで使用
 	public int gacha_left_count;
+	//カードパワーアップシーンで使用
 
 	//プロパティ
 	public override void onAwake()
