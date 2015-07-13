@@ -60,7 +60,6 @@ public class PlayState : Singleton<PlayState> {
 
 	//ガチャシーン→ガチャリザルトシーンで使用
 	public int gacha_left_count;
-	//カードパワーアップシーンで使用
 
 	//プロパティ
 	public override void onAwake()
