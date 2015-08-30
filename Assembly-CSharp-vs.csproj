@@ -68,6 +68,9 @@
      <Compile Include="Assets\Script\UIbutton\CharacterPowerUpButton.cs" />
      <Compile Include="Assets\Script\UIbutton\CharacterPowerUpButton2.cs" />
      <Compile Include="Assets\Script\UIbutton\CharacterRemoveButton.cs" />
+     <Compile Include="Assets\Script\XMLUtility.cs" />
+     <Compile Include="Assets\Script\XmlPractice.cs" />
+     <None Include="Assets\SerializeData.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

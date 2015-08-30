@@ -18,17 +18,20 @@ public class PlayState : Singleton<PlayState> {
 
 	//キャラのclass
 	public class Character{
-		public int number;
+
 		public int atk;
 		public int def;
 		public int level;
+		public int skilllevel;
+
+
+		public string charaName;
+		public Sprite img;
+		public string skillName;
+		public int number;
 		public int rarerity;
 		public int cost;
-		public int skill;
-		public string charaName;
-		public string skillName;
-		public int skilllevel;
-		public Sprite img;
+
 	}
 	//シーン更新の際引き継ぐデータ
 	[System.NonSerialized]
@@ -90,6 +93,22 @@ public class PlayState : Singleton<PlayState> {
 
 		for (int i=0; i<character.Length; i++) {
 			//カグヤデータ
+
+//			atk;
+//			 int def;
+//			public int level;
+//			public int skilllevel;
+
+
+
+			
+//			public string charaName;
+//			public Sprite img;
+//			public string skillName;
+//			public int number;
+//			public int rarerity;
+//			public int cost;
+	
 			character [i].number = i;
 			character [i].charaName = "かぐや" + i.ToString();
 			character [i].atk = 100 * i;
@@ -97,7 +116,6 @@ public class PlayState : Singleton<PlayState> {
 			character [i].level = 5 * i;
 			character [i].rarerity = i;
 			character [i].cost = i;
-			character [i].skill = 1;
 			character [i].skillName = "ポイズン";
 			character [i].skilllevel = 1;
 		}
@@ -114,4 +132,13 @@ public class PlayState : Singleton<PlayState> {
 			Application.Quit();
 		}
 	}
+
+	void OnApplicationQuit() {
+
+
+	}
+
+
+
+
 }

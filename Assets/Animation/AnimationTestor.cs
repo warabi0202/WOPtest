@@ -28,7 +28,7 @@ public class AnimationTestor : MonoBehaviour {
 		GameObject attackDonki_ins = Instantiate( attackAnimationPrefab ,origin.position + (Vector3.down * 0.3f), origin.rotation) as GameObject;
 		
 		attackDonki_ins.GetComponent<Animator> ().SetInteger ("animationNumber",selectnumber);
-		attackDonki_ins.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
+		//attackDonki_ins.transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
 
 	}
 }
