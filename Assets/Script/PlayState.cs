@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine.UI;
-using System.Collections.Generic;
+using System.Collections.Generic;6
 using System;
 
 
@@ -12,6 +12,17 @@ using System;
 //シングルトン設計
 public class PlayState : Singleton<PlayState> {
 	
+	public class PlayerStatus{
+		public int lv;
+		public int stp;
+		public int stp_max;
+		public DateTime oldDateTime;
+	}
+	
+	public PlayerStatus playerStatus;
+	private string serializeDataPath;
+
+
 	
 	//定数
 	public string[] charaName = new string[] { "Betelgeuse" };
@@ -73,7 +84,18 @@ public class PlayState : Singleton<PlayState> {
 	}
 
 	void Start()
-	{Debug.Log("init");
+	{
+		serializeDataPath = Application.dataPath + "/PlayerData.xml";
+
+//		playerStatus = new PlayerStatus ();
+//		playerStatus.lv = 1;
+//		playerStatus.stp = 30;
+//		playerStatus.stp_max = 35;
+//		XMLUtility.Seialize<PlayerStatus> (serializeDataPath, playerStatus);
+		playerStatus = XMLUtility.Deserialize<PlayerStatus>(serializeDataPath);
+		Debug.Log (playerStatus.lv);
+
+		Debug.Log("init");
 		//	とりあえず初期化
 		for (int i=0; i<selectCharaNumber.Length; i++) {
 			selectCharaNumber [i] = i;
@@ -134,8 +156,7 @@ public class PlayState : Singleton<PlayState> {
 	}
 
 	void OnApplicationQuit() {
-
-
+		XMLUtility.Seialize<PlayerStatus>(serializeDataPath,playerStatus);
 	}
 
 
