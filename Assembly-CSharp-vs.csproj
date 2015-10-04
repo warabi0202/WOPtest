@@ -73,7 +73,10 @@
      <Compile Include="Assets\Script\XMLUtilty.cs" />
      <Compile Include="Assets\Script\XmlPractice.cs" />
      <None Include="Assets\PlayerData.xml" />
+     <None Include="Assets\CharacterData.xml" />
+     <None Include="Assets\SelectCharaData.xml" />
      <None Include="Assets\SerializeData.xml" />
+     <None Include="Assets\BackMemberData.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

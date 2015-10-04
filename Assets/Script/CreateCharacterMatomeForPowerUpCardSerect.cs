@@ -22,11 +22,10 @@ public class CreateCharacterMatomeForPowerUpCardSerect : MonoBehaviour {
 		//フロントキャラ表示
 		for (int i=0; i<PlayState.Instance.selectCharaNumber.Length; i++) {	
 
-			if(i==0) selectCharaCount = 0;
+			if(i==0) selectCharaCount = -1;
+			selectCharaCount++;
 
 			if (PlayState.Instance.selectCharaNumber [i] != -1) {
-
-				selectCharaCount++;
 
 				var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 				item.SetParent (transform, false);
@@ -56,10 +55,9 @@ public class CreateCharacterMatomeForPowerUpCardSerect : MonoBehaviour {
 		}
 		//バックキャラ表示
 		for (int i=0; i<PlayState.Instance.backCharaNumber.Count; i++) {
-			
-			if (PlayState.Instance.backCharaNumber [i] != -1) {
 
-				selectCharaCount++;
+			selectCharaCount++;
+			if (PlayState.Instance.backCharaNumber [i] != -1) {
 
 				var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 				item.SetParent (transform, false);
