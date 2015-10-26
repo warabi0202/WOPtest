@@ -18,9 +18,12 @@ public class CharacterRemoveButton : MonoBehaviour {
 	}
 
 	public void CharacterRemover(){
+
+		//PlayState.Instance.backCharaNumber.Add (PlayState.Instance.selectCharaNumber[gameObject.transform.parent.GetComponent<CharacterMatome> ().number]);
 		PlayState.Instance.selectCharaNumber
 			[gameObject.transform.parent.GetComponent<CharacterMatome> ().number]
 			= -1;
+
 //		RectTransform charaEnter = Instantiate (characterEnter) as RectTransform;
 //		charaEnter.SetParent (transform.parent.parent);
 //		Destroy (gameObject.transform.parent.gameObject);

@@ -24,7 +24,7 @@ public class CreateGachaResult : MonoBehaviour {
 	int result;
 	int func_state;
 	int[] table = new int[]
-	{0, 1, 2, 3, 4, 5, 6, 7, 8};
+	{0, 1, 2, 3, 4, 5};
 
 	float waitTimer;
 	
@@ -40,17 +40,20 @@ public class CreateGachaResult : MonoBehaviour {
 		Debug.Log (func_state);
 		switch (func_state) {
 		case 0://ガチャ結果代入
-			result = table[UnityEngine.Random.Range (0, table.Length - 1)];
-			gachaResultCharaNumber.Add (result);
+			result = table[UnityEngine.Random.Range (0, table.Length)];
+			gachaResultCharaNumber.Add (PlayState.Instance.character.Count);
 			PlayState.Instance.gacha_left_count --;
 
 			//PlayStateに結果代入(バックメンバーに追加)
-			PlayState.Instance.backCharaNumber.Add(result);
+			PlayState.Instance.backCharaNumber.Add(PlayState.Instance.character.Count);
+
+			PlayState.Instance.temp = PlayState.Instance.basecharacter[result];
+			PlayState.Instance.character.Add(PlayState.Instance.temp);
 
 			//画像表示用のカード作成
 			var item = GameObject.Instantiate (Card) as RectTransform;
 			item.SetParent (transform, false);
-			item.GetComponent<Image> ().sprite = PlayState.Instance.character [result].img;
+			item.GetComponent<Image> ().sprite = PlayState.Instance.characterimg[result];
 
 			func_state = 10;
 			break;
@@ -87,7 +90,7 @@ public class CreateGachaResult : MonoBehaviour {
 
 				//要素代入
 				RectTransform image = item2.FindChild("Image") as RectTransform;
-				image.GetComponentInChildren<Image>().sprite = PlayState.Instance.character[gachaResultCharaNumber[i]].img;
+				image.GetComponentInChildren<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[gachaResultCharaNumber[i]].number];
 
 				//名前
 				RectTransform charaName = item2.FindChild("CharacterName") as RectTransform;

@@ -21,6 +21,7 @@ public class CreateCharacterMatome : MonoBehaviour {
 				var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 				item.SetParent (transform, false);
 				item.GetComponent<CharacterMatome> ().number = i;
+				item.FindChild("Image").GetComponent<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[PlayState.Instance.selectCharaNumber [i]].number];
 
 
 				//名前
@@ -51,6 +52,7 @@ public class CreateCharacterMatome : MonoBehaviour {
 		if(IsAbleCharaEnter == true){
 			var item2 = GameObject.Instantiate(Contentprefab2) as RectTransform;
 			item2.SetParent(transform,false);
+
 		}
 		
 	

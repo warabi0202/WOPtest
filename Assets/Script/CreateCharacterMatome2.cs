@@ -18,6 +18,8 @@ public class CreateCharacterMatome2 : MonoBehaviour {
 				var item = GameObject.Instantiate(Contentprefab) as RectTransform;
 				item.SetParent(transform,false);
 				item.GetComponent<CharacterMatome>().number = i;
+				item.FindChild("Image").GetComponent<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[PlayState.Instance.backCharaNumber[i]].number];
+
 				Debug.Log(PlayState.Instance.backCharaNumber[i]);
 				//名前
 				RectTransform charaName = item.FindChild("CharacterName") as RectTransform;
@@ -39,7 +41,7 @@ public class CreateCharacterMatome2 : MonoBehaviour {
 				RectTransform charaCost = item.FindChild("CharacterCost") as RectTransform;
 				charaCost.GetComponentInChildren<Text>().text = "Lv　" + PlayState.Instance.character[PlayState.Instance.backCharaNumber[i]].cost.ToString();
 				
-				
+				//
 			}
 		}
 		

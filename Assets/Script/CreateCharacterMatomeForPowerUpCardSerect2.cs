@@ -14,10 +14,6 @@ public class CreateCharacterMatomeForPowerUpCardSerect2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-
-
-		
 	}
 	
 	// Update is called once per frame
@@ -42,8 +38,10 @@ public class CreateCharacterMatomeForPowerUpCardSerect2 : MonoBehaviour {
 					var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 					item.SetParent (transform, false);
 					item.GetComponent<CharacterMatome> ().number = selectCharaCount;
-					
-					
+					item.FindChild("Image").GetComponent<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[PlayState.Instance.selectCharaNumber [i]].number];
+					//item.FindChild("CharacterPowerUpButton2").GetComponent<Button>().enabled = false;
+					item.FindChild("CharacterPowerUpButton2").gameObject.SetActive(false);
+					Debug.Log("111");
 					//名前
 					RectTransform charaName = item.FindChild ("CharacterName") as RectTransform;
 					charaName.GetComponentInChildren<Text> ().text = PlayState.Instance.character [PlayState.Instance.selectCharaNumber [i]].charaName;
@@ -76,6 +74,7 @@ public class CreateCharacterMatomeForPowerUpCardSerect2 : MonoBehaviour {
 					var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 					item.SetParent (transform, false);
 					item.GetComponent<CharacterMatome> ().number = selectCharaCount;
+					item.FindChild("Image").GetComponent<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[PlayState.Instance.backCharaNumber [i]].number];
 					
 				//名前
 					RectTransform charaName = item.FindChild ("CharacterName") as RectTransform;

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -17,11 +17,8 @@ public class CreateCharacterMatomeForPowerUpCardSerect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-
 		//フロントキャラ表示
 		for (int i=0; i<PlayState.Instance.selectCharaNumber.Length; i++) {	
-
 			if(i==0) selectCharaCount = -1;
 			selectCharaCount++;
 
@@ -30,7 +27,8 @@ public class CreateCharacterMatomeForPowerUpCardSerect : MonoBehaviour {
 				var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 				item.SetParent (transform, false);
 				item.GetComponent<CharacterMatome> ().number = selectCharaCount;
-				
+				item.FindChild("Image").GetComponent<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[PlayState.Instance.selectCharaNumber [i]].number];
+
 				
 				//名前
 				RectTransform charaName = item.FindChild ("CharacterName") as RectTransform;
@@ -62,6 +60,10 @@ public class CreateCharacterMatomeForPowerUpCardSerect : MonoBehaviour {
 				var item = GameObject.Instantiate (Contentprefab) as RectTransform;
 				item.SetParent (transform, false);
 				item.GetComponent<CharacterMatome> ().number = selectCharaCount;
+
+				Debug.Log("バックキャラ番号"+PlayState.Instance.backCharaNumber [i]);
+				Debug.Log("キャラナンバー"+PlayState.Instance.character[PlayState.Instance.backCharaNumber [i]].number);
+				item.FindChild("Image").GetComponent<Image>().sprite = PlayState.Instance.charImg[PlayState.Instance.character[PlayState.Instance.backCharaNumber [i]].number];
 				
 				//名前
 				RectTransform charaName = item.FindChild ("CharacterName") as RectTransform;
