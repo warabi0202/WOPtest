@@ -15,6 +15,7 @@ public class PlayState : Singleton<PlayState> {
 	//Playerのステータス表示
 	public class PlayerStatus{
 		public int lv;
+		public int stone;
 		public int stp;
 		public int stp_max;
 		public DateTime oldDateTime;

@@ -1,69 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Character>
-    <atk>1000</atk>
-    <def>1000</def>
-    <level>1</level>
-    <skilllevel>1</skilllevel>
-    <charaName>かぐや</charaName>
-    <skillName>ポイズン</skillName>
+    <atk>0</atk>
+    <def>0</def>
+    <level>0</level>
+    <skilllevel>0</skilllevel>
     <number>0</number>
-    <rarerity>1</rarerity>
-    <cost>1</cost>
+    <rarerity>0</rarerity>
+    <cost>0</cost>
   </Character>
   <Character>
-    <atk>2000</atk>
-    <def>2000</def>
-    <level>1</level>
-    <skilllevel>1</skilllevel>
-    <charaName>御影</charaName>
-    <skillName>ポイズン</skillName>
-    <number>1</number>
-    <rarerity>1</rarerity>
-    <cost>1</cost>
+    <atk>0</atk>
+    <def>0</def>
+    <level>0</level>
+    <skilllevel>0</skilllevel>
+    <number>0</number>
+    <rarerity>0</rarerity>
+    <cost>0</cost>
   </Character>
   <Character>
-    <atk>2000</atk>
-    <def>1000</def>
-    <level>1</level>
-    <skilllevel>1</skilllevel>
-    <charaName>アマリア</charaName>
-    <skillName>ポイズン</skillName>
-    <number>2</number>
-    <rarerity>1</rarerity>
-    <cost>1</cost>
+    <atk>0</atk>
+    <def>0</def>
+    <level>0</level>
+    <skilllevel>0</skilllevel>
+    <number>0</number>
+    <rarerity>0</rarerity>
+    <cost>0</cost>
   </Character>
   <Character>
-    <atk>3000</atk>
-    <def>1500</def>
-    <level>1</level>
-    <skilllevel>1</skilllevel>
-    <charaName>エレノア</charaName>
-    <skillName>ポイズン</skillName>
-    <number>3</number>
-    <rarerity>1</rarerity>
-    <cost>1</cost>
+    <atk>0</atk>
+    <def>0</def>
+    <level>0</level>
+    <skilllevel>0</skilllevel>
+    <number>0</number>
+    <rarerity>0</rarerity>
+    <cost>0</cost>
   </Character>
   <Character>
-    <atk>2500</atk>
-    <def>2100</def>
-    <level>1</level>
-    <skilllevel>1</skilllevel>
-    <charaName>クロマジ</charaName>
-    <skillName>ポイズン</skillName>
-    <number>4</number>
-    <rarerity>1</rarerity>
-    <cost>1</cost>
+    <atk>0</atk>
+    <def>0</def>
+    <level>0</level>
+    <skilllevel>0</skilllevel>
+    <number>0</number>
+    <rarerity>0</rarerity>
+    <cost>0</cost>
   </Character>
   <Character>
-    <atk>5000</atk>
-    <def>2500</def>
-    <level>1</level>
-    <skilllevel>1</skilllevel>
-    <charaName>カーミラ</charaName>
-    <skillName>ポイズン</skillName>
-    <number>5</number>
-    <rarerity>1</rarerity>
-    <cost>1</cost>
+    <atk>0</atk>
+    <def>0</def>
+    <level>0</level>
+    <skilllevel>0</skilllevel>
+    <number>0</number>
+    <rarerity>0</rarerity>
+    <cost>0</cost>
   </Character>
 </ArrayOfCharacter>

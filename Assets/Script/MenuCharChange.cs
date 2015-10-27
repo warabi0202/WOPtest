@@ -18,7 +18,7 @@ public class MenuCharChange : MonoBehaviour {
 
 			switch(PlayState.Instance.character [PlayState.Instance.selectCharaNumber [0]].number){
 			case 0://ran
-				transform.position = new Vector3(-1.0f,-0.4f,0.0f);
+				transform.position = new Vector3(-1.0f,-1.0f,0.0f);
 				transform.localScale = new Vector3(1.0f,1.0f,1.0f);
 				break;
 
